@@ -1,0 +1,22 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+body{
+  background-color: #202020;
+  color: #fff;
+}
+.content, .photos, .movies{
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.photos img{
+  margin: 20px;
+}
+.movie-item{
+  width: 200px;
+}
