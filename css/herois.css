@@ -20,3 +20,39 @@ body{
 .movie-item{
   width: 200px;
 }
+.logo-iron{
+  width: 60%;
+}
+.char-iron{
+ width: 30%;
+}
+.char-captain{
+  width: 18%;
+}
+.logo-spider{
+  width: 60%;
+}
+.char-spider{
+ width: 16%;
+}
+h2{
+  letter-spacing: 10px;
+}
+iframe{
+  padding: 10px 5px;
+}
+a:link
+{
+text-decoration:none;
+}
+.btn-logout{
+ background-color: Black;
+ border: none;
+}
+.bio{
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

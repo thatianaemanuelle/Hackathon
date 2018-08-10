@@ -7,14 +7,31 @@ body{
   font-family: sans-serif;
   background-color: #202020;
 }
-.login-img{
-  opacity: 0.3;
-}
 .logo{
-  width: 100px;
-  height: 55px;
+  width: 110px;
 }
-@charset "utf-8";
+.login{
+	height:500px;
+	width:100%;
+}
+.login-img{
+	background-image:url("../imagens/login-img.jpg");
+	background-repeat:no-repeat;
+	background-size: contain;
+	height:500px;
+	opacity:0.5;
+	}
+.login2{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+}
+	#input-login{
+		width:400px;
+		border:none;
+		border-bottom:1px solid #B9B7B7;
+  }
 ul {
 	text-decoration: none;
 	display:flex;
@@ -22,7 +39,6 @@ ul {
 li {
 	list-style: none;
 	flex-direction:row;
-
 }
   a{
 	color:#fff;
@@ -42,29 +58,6 @@ header a{
     border-radius: 10px;
     text-decoration: none;
 }
-.login{
-	height:500px;
-	width:100%;}
-.login-img{
-	background-image:url(images/herois.jpg) ;
-	background-repeat:no-repeat;
-	background-size: contain;
-	height:500px;
-
-	opacity:0.5;
-	}
-.login2{
-	display:flex;
-	flex-direction:column;
-	align-items:center;
-	justify-content:center;}
-
-
-	#input-login{
-		width:400px;
-		border:none;
-		border-bottom:1px solid #B9B7B7;}
-
 		i{
 			margin:10px;
 			font-size:48px;

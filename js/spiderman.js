@@ -1,28 +1,10 @@
-$(document).ready(function(){
-  $(".sign-up-button").Click(function(){
-    event.preventDefault();
-
-    var email = $(".sign-up-email").val();
-    var senha = $(".sign-up-senha").val();
-
-    firebase.auth().createUserWithEmailAndPassaword(email,senha).then(function(){
-      window.location = "home.html";
-    })
-    .cath(function(error){
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      alert(errorMessage);
-    })
-  })
-})
-
-fetch("http://superheroapi.com/api/10211817607051908/717",  {method: 'GET'} )
+fetch("http://superheroapi.com/api/10211817607051908/620",  {method: 'GET'} )
   .then(response => response.json())
   .then(data => insertCharacter(data));
 
   function insertCharacter(data){
     console.log(data)
-    $('.character').append(`<img src="${data.image.url}" width="200">  <h1>${data.name}</h1> <h2>${data.biography['full-name']}</h2> <p>${data.biography['place-of-birth']}</p> <div class="skills"><h3>Habilidades</h3></div>`);
+    $('.character').append(`<div class="bio"><img src="${data.image.url}" width="200" height="260">  <div class="about"><h1 class="text-uppercase">${data.name}</h1> <h2>${data.biography['full-name']}</h2> <p>${data.biography['place-of-birth']}</p></div> <div class="skills bg-dark p-5"><h3>Habilidades</h3></div></div>`);
     function loop(){
       for ( skill in data.powerstats){
         console.log(data.powerstats[skill])
@@ -32,7 +14,7 @@ fetch("http://superheroapi.com/api/10211817607051908/717",  {method: 'GET'} )
   loop();
 }
 
-fetch("https://content.googleapis.com/youtube/v3/search?maxResults=5&part=snippet&q=wolverine&key=AIzaSyA6InuRy7F7wOjeUxDZqrOeDCylBpt-OdY", {method: 'GET'})
+fetch("https://content.googleapis.com/youtube/v3/search?maxResults=4&part=snippet&q=spider-man&key=AIzaSyA6InuRy7F7wOjeUxDZqrOeDCylBpt-OdY", {method: 'GET'})
 .then(response => response.json())
 .then(data => insertVideo(data));
 
@@ -43,7 +25,7 @@ function insertVideo(data){
   }
 }
 
-fetch("http://www.omdbapi.com/?apikey=7acb37a5&s=wolverine", {method: 'GET'})
+fetch("http://www.omdbapi.com/?apikey=7acb37a5&s=spider-man", {method: 'GET'})
 .then(response => response.json())
 .then(data => insertMovies(data));
 
