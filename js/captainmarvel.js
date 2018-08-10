@@ -20,18 +20,18 @@ fetch("https://content.googleapis.com/youtube/v3/search?maxResults=4&part=snippe
 
 function insertVideo(data){
   for (item of data.items) {
-    let iframe = ` <iframe width="230" height="150" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> `;
+    let iframe = ` <iframe width="520" height="350" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> `;
     $('.videos').append(iframe)
   }
 }
 
-fetch("http://www.omdbapi.com/?apikey=7acb37a5&s=captainmarvel", {method: 'GET'})
+fetch("http://www.omdbapi.com/?apikey=7acb37a5&s=avengers", {method: 'GET'})
 .then(response => response.json())
 .then(data => insertMovies(data));
 
 function insertMovies(data){
   for (item of data.Search) {
-    let content = ` <div class="movie-item"><img src="${item.Poster}" width="200" height="230"> <h3>${item.Title}</h3> <a href="https://www.imdb.com/title/${item.imdbID}">IMDB</a></div> `;
+    let content = ` <div class="movie-item"><img src="${item.Poster}"  width="150" height="200"> <h3>${item.Title}</h3> <a href="https://www.imdb.com/title/${item.imdbID}">IMDB</a></div> `;
     $('.movies').append(content);
   }
 }

@@ -59,7 +59,7 @@ $(document).ready(function() {
 
        function insertVideo(data){
          for (item of data.items) {
-           let iframe = ` <iframe width="250" height="175" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> `;
+           let iframe = ` <iframe width="520" height="350" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> `;
            $('.videos').append(iframe)
          }
        }
@@ -70,7 +70,7 @@ $(document).ready(function() {
 
        function insertMovies(data){
          for (item of data.Search) {
-           let content = ` <div class="movie-item"><img src="${item.Poster}" width="200" height="230"> <h3>${item.Title}</h3> <a href="https://www.imdb.com/title/${item.imdbID}">IMDB</a></div> `;
+           let content = ` <div class="movie-item"><img src="${item.Poster}" width="150" height="200"> <h3>${item.Title}</h3> <a href="https://www.imdb.com/title/${item.imdbID}">IMDB</a></div> `;
            $('.movies').append(content);
          }
        }
